@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RPS</title>
+</head>
+
+<body>
+
+    <div class="game">
+        Press r, p, or s to start playing.
+    </div>
+
+    <br><br><br>
+    <p> Your Choice: <span id='user-choice'></span></p>
+    <p> Comp Choice: <span id='comp-choice'></span></p>
+    <br>
+    <p> Wins: <span id='wins'></span></p>
+    <p> Losses: <span id='losses'></span></p>
+    <p> Ties: <span id='ties'></span></p>
+
+
+
+    <!-- 
+Get user move
+Get computer move (random)
+Determine winner
+Update score 
+-->
+
+    <script type="text/javascript">
+
+        var wins = 0;
+        var losses = 0;
+        var ties = 0;
+        var compGuesses = ['r', 'p', 's'];
+
+
+
+        var userChoiceTag = document.getElementById("user-choice");
+        var cpuChoiceTag = document.getElementById("comp-choice");
+
+        var winsTag = document.getElementById("wins");
+        var lossesTag = document.getElementById("losses");
+        var tiesTag = document.getElementById("ties");
+
+
+
+        document.onkeyup = function () {
+            var userGuess = event.key;
+
+            var compGuess = compGuesses[Math.floor(Math.random() * compGuesses.length)];
+
+            if (userGuess === compGuess) {
+                ties += 1;
+            }
+            else if (userGuess === 'r' && compGuess === 'p') {
+                losses += 1;
+            }
+            else if (userGuess === 'r' && compGuess === 's') {
+                wins += 1;
+            }
+            else if (userGuess === 'p' && compGuess === 'r') {
+                wins += 1;
+            }
+            else if (userGuess === 'p' && compGuess === 's') {
+                losses += 1;
+            }
+            else if (userGuess === 's' && compGuess === 'r') {
+                losses += 1;
+            }
+            else if (userGuess === 's' && compGuess === 'p') {
+                wins += 1;
+            }
+
+
+
+            userChoiceTag.textContent = userGuess;
+            cpuChoiceTag.textContent = compGuess;
+            winsTag.textContent = wins;
+            lossesTag.textContent = losses;
+            tiesTag.textContent = ties;
+
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>

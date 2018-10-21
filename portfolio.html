@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -30,9 +31,9 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <div class="port">
-                    <img src="assets/images/NBA-highlights-site.png">
-                    <h3>Spoiler Free Highlights</h3>
+                <div class="port" id="hangman">
+                    <img src="assets/images/Word-Guess-Game-site.png">
+                    <h3>Term Guessing Hangman</h3>
                 </div>
             </div>
             <div class="col-md-6">
@@ -70,7 +71,6 @@
     </div>
 
 
-
     <!-- sticky footer -->
     <footer>
         <div class="container" id="footer-container">
@@ -88,7 +88,11 @@
         </div>
     </footer>
 
-
+    <script>
+        $('#hangman').click(function () {
+            window.location = "https://carsonwack.github.io/Word-Guess-Game/";
+        });
+    </script>
 
 
 

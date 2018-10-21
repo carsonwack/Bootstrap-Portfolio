@@ -157,6 +157,9 @@ html {
   }
 }
 
+#hangman:hover {
+    outline: 3px solid white;
+}
 
 
 
