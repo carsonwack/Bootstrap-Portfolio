@@ -161,6 +161,9 @@ html {
     outline: 3px solid white;
 }
 
+#crystals:hover {
+    outline: 3px solid white;
+}
 
 
 @media screen and (max-width: 768px) {
