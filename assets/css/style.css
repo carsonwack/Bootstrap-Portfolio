@@ -173,6 +173,11 @@ html {
     outline: 3px solid white;
 }
 
+#gifs:hover {
+    outline: 3px solid white;
+}
+
+
 
 @media screen and (max-width: 768px) {
 
